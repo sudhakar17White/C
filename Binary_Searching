@@ -1,0 +1,107 @@
+
+#include <stdio.h>
+
+void main()
+{
+
+    int size,serach;
+    
+    printf("-----Binary Seraching-----\n\n");
+    printf("A search algorithm that finds the position of a target value within a sorted array\n");
+    
+    
+    printf("Enter the size of array :");
+    
+    
+    scanf("%d",&size);
+    
+    int a[size];
+    
+    
+    
+    for(int i=0;i<size;i++)
+    { 
+        
+        scanf("%d",&a[i]);
+        
+    }
+    
+    
+    
+    
+    printf("\nindex=[");
+    for(int i=0;i<size;i++)
+    { 
+        
+        printf("%d ",i);
+        
+    }
+    printf("]");
+    
+    
+    
+    printf("\nvalue=[");
+    for(int i=0;i<size;i++)
+    { 
+        
+        printf("%d ",a[i]);
+        
+    }
+    printf("]\n\n");
+    
+    printf("Enter the Serach Element:");
+    scanf("%d",&serach);
+    
+    int i,low=0,mid,high=size,flag=0,po=0;
+    
+    
+    
+    for(i=1;i<=size;i++)
+    { 
+      
+      mid=low+size/2;
+      
+      
+      if(mid==serach)
+      { 
+      
+          mid=i;
+          flag=1;
+          break;
+          
+      }
+      else if(a[mid]>serach)
+      { 
+          
+         
+          high=mid-1;
+        
+          printf("Element found at position %d",high); 
+          break;
+          
+          
+            
+      }
+      else
+      {
+          
+          low=mid+1;
+          
+          printf("Element found at position %d",low);    
+          break;
+      }
+      
+      
+        
+    }
+    if(flag==1)
+      { 
+          printf("Element found at position %d",i);
+          
+      }
+    
+    
+    
+    
+    
+}
