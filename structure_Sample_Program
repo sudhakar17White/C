@@ -1,0 +1,79 @@
+//Basic of struct concept  
+
+//how to intizaltion and how to delecration 
+ 
+#include <stdio.h>
+
+struct student //--->this is struct's tag name student ,it is user define data 
+{
+    
+    //delecration part only
+    
+    //we connot delecration inside the struct
+    
+    
+    
+    char name[20];
+    
+    int age;
+    
+    char option[10];
+    
+    
+    
+    
+}s;//this way to create the object for this struct
+
+void main()
+{ 
+ 
+    printf("--------Voteing program using struct ---------\n");
+    
+    //this program how  to get the data fro m user using struct object
+    
+    
+    
+    
+    
+    do
+    {
+    
+    
+    printf("\nEnter the Name :");
+    scanf("%s",s.name);
+    
+    printf("Enter the age :");
+    scanf("%d",&s.age);
+    
+    if(s.age>=18)
+    { 
+        
+        printf("Your are elgible to vote %s\n",s.name);
+        
+    }
+    else
+    { 
+        
+        printf("Your are wait for %d\n",(18-s.age));
+        
+        
+    }
+    
+    printf("Exit -[yes],Continue[no]\n");
+    scanf("%s",s.option);
+    
+    
+    }while(s.option!="yes");
+    
+    
+    
+ 
+ 
+    
+}
+
+
+
+
+
+
