@@ -1,0 +1,68 @@
+//struct of array concept impelemetaion
+
+
+#include <stdio.h>
+
+struct student 
+{
+    
+    int roll_num;
+    
+    char name[10];
+    
+    int total_mark;
+    
+    
+};
+
+
+
+void main()
+{
+    int i,limit;
+    
+    
+    //limit for struct of array
+    printf("Enter the limit of data will be store:");
+    
+    scanf("%d",&limit);
+    
+    
+    //object for struct array by passing arguments
+    struct student s[limit];
+    
+    for(i=0;i<limit;i++)
+    { 
+        
+        printf("******************************************\n");
+        printf("Enter the Rollnum of %d student: ",i+1);
+        scanf("%d",&s[i].roll_num);
+        
+        printf("Enter the name of %d student: ",i+1);
+        scanf("%s",s[i].name);
+        
+        printf("Enter the Total_Mark of %d student: ",i+1);
+        scanf("%d",&s[i].total_mark);
+        
+        if(i+1==limit)
+        { 
+            
+            printf("\nAll %d Records are sucessfully Update...",limit);
+            
+        }
+        
+        
+    }
+    for(int i=0;i<limit;i++)
+    { 
+        
+        printf("\n******************************************\n");
+        printf("%d student' roll_num : %d\n",i+1,s[i].roll_num);
+        printf("%d student' Name : %s\n",i+1,s[i].name);
+        printf("%d student' total_mark : %d\n",i+1,s[i].total_mark);
+        
+        
+        
+        
+    }
+}
