@@ -1,2 +1,2 @@
-# Data-Structure
+# C-Basics,Data-Structure
 # 🇨 Language
